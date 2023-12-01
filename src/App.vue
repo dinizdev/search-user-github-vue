@@ -39,18 +39,18 @@ const handleBackModal = () => {
 </script>
 
 <template>
-  <div class="bg-slate-800 h-screen flex justify-center items-center text-white">
+  <div class="bg-slate-950 h-screen flex justify-center items-center text-white">
     <form v-if="isModal" @submit.prevent="handleUser" id="sw"
-      class="flex items-center flex-col shadow-2xl shadow-blue-600 backdrop-blur-md gap-5 bg-slate-900 p-20 text-center">
+      class="flex items-center justify-center flex-col shadow-2xl shadow-blue-600 backdrop-blur-md gap-5 bg-slate-900 p-20 text-center">
       <h1 class="text-2xl underline">Github Search Users</h1>
       <label for="user" class="flex gap-4">Insert your user below
         <Icon class="text-2xl" icon="ep:arrow-up-bold" :rotate="2" />
       </label>
-      <input type="text" v-model="user" class="p-2 outline-none bg-slate-600">
-      <button class="flex items-center justify-center gap-5 text-xl bg-slate-800 p-2 pointer hover:bg-slate-700"
+      <input type="text" v-model="user" class="p-2 outline-none border-[0.5px] border-white  w-full bg-gray-950">
+      <button
+        class="flex w-full items-center justify-center gap-5 text-md capitalize bg-blue-900 p-2 pointer hover:bg-blue-700 "
         type="submit">
         Generate
-        <Icon icon="mdi:bottle-tonic-skull" class="text-2xl" />
       </button>
 
       <p class="font-bold text-red-600" v-show="hasError">{{ errorMessage }}</p>
